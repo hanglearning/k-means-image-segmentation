@@ -12,6 +12,9 @@ For example:
 ```$ python hw3.py image_to_do_segmentation.jpeg```
 
 The program will segment the photo with K = 1, 2, 5, 10, 20 and generate the corresponding pictures to the current directory where the code file resides in.
-From the experiment we found that as the value of K increases, the time used to segment the picture will increase. Also, since the pictures generated from the program will have the same resolution of the original image, please consider using small images since the larger images you use with this program, the longer you could wait to get the results.
+
+From the experiment we found that as the value of K increases, the time used to segment the picture will also increase. Plus, since the pictures generated from the program will have the same resolution of the original image, please consider using small images since the larger images you use with this program, the longer you could wait to get the results.
 
 Please go to line 24 to change the value of K.
+
+Assignment report page: https://hanglearning.github.io/k-means-image-segmentation/
