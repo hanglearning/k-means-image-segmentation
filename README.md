@@ -6,6 +6,7 @@ This repo contains the code and a report(please visit the github page) about the
 Please run from the command line -
 
 ```$ python hw3.py <image_path>```
+
 For example:
 
 ```$ python hw3.py image_to_do_segmentation.jpeg```
