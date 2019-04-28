@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/image-hover.css">
+<div class="container">
+    <div class="card mx-4" style="margin-top: 20px">
+        <div class="card-body">
+            <h3>Our findings in Step 3</h3>
+            <hr>
+            <h4>Take a new photo of which you believe k=2 is the best, and verify it use your
+                    program in step 1.</h4>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="image-modal">
+                    <div id="caption"></div>
+                </div>
+    
+            <div class="container">
+                <div class="row" style="
+                margin-top: 20px;">
+                    <div class="img-with-text col">
+                        <img class="image-hover" id="monitor_sign_original" alt="Original" width="100%" src="img/monitor_sign.JPEG">
+                        <p>Original</p>
+                    </div> 
+                    <div class="img-with-text col">
+                        <img class="image-hover" id="monitor_sign_k2" alt="K = 2" width="100%" src="img/new_monitor_sign_K2.png">
+                        <p>K = 2</p>
+                    </div> 
+                </div>
+            <p><span style="color: red">Answer:</span></p> 
+            <p>While we were studying this question in the basement of the Morris Library, we believed that the photo which has K=2 as the best must have two strong contrast color in the picture. Basically that means we have to take a photo that only has two base colors in the picture and these two colors should have high constrast. 
+            <p>We raised our heads and saw this sign on the wall, and we believed this is a great example. Although in this picture it has three base colors - purple as the wall, blue as the background color of the sign, and white text color of the sign, we had the faith that when we run our algorithm using K = 2 with this picture, the text of the sign will still be somehow a light color closer to white while the other color should be the a color that's between blue and purple, as compared to white, the euclid distance between blue and purple should be closer, so they will be clustered together, and white color pixels with other ligh color pixels will also be clustered together. We verified our belief with our resulted picture.</p>
+            
+        </div>
+    
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    // https://stackoverflow.com/questions/48239/getting-the-id-of-the-element-that-fired-an-event/40043918 
+    $(document).ready(function() {
+        $(".image-hover").click(function(event) {
+            img_id = event.target.id;
+            /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img */
+            // Get the modal
+            var modal = document.getElementById('myModal');
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            console.log(img_id);
+            var img = document.getElementById(img_id);
+            console.log(img);
+            var modalImg = document.getElementById("image-modal");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+        });
+        
+    });
+</script>

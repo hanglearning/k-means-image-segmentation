@@ -1,0 +1,5 @@
+/* https://stackoverflow.com/questions/1225130/how-can-i-align-text-directly-beneath-an-image */
+.img-with-text p {
+    margin-top: 10px;
+    text-align: center;
+}
