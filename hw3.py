@@ -62,11 +62,11 @@ for K in (1, 2, 5, 10, 20):
     '''Recreate and output the image'''
     newIm = Image.new("RGB", (width, height))
     pix = newIm.load()
-    for i in range(height):
+    for i in range(1, height+1):
         for j in range(width):
             for center in clusterDict:
                 if ((i - 1) * width + j) in clusterDict[center]:
-                    pix[j,i] = center
+                    pix[j,i-1] = center
     newIm.save("new_{}_K{}.png".format(image_name, K), "PNG")
 
 print("All finished!")
